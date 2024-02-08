@@ -20,15 +20,6 @@ class Computer:
         self.year_made = year_made
         self.price = price
     
-    def create_computer(self):
-        return {'description': self.description,
-            'processor_type': self.processor_type,
-            'hard_drive_capacity': self.hard_drive_capacity,
-            'memory': self.memory,
-            'operating_system': self.operating_system,
-            'year_made': self.year_made,
-            'price': self.price
-    }
 
     def refurbish(self, new_os: Optional[str] = None):
         if int(self.year_made) < 2000:
