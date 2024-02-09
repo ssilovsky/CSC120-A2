@@ -7,11 +7,10 @@ class ResaleShop:
     inventory:list
 
     def __init__(self):
-        self.inventory = []
+        self.inventory = [] # inventory object created as a list
 
-    
     def buy(self, computer):
-        self.inventory.append(computer)
+        self.inventory.append(computer) # add Computer class object to list
     
     def print_inventory(self):
     # If the inventory is not empty
@@ -25,28 +24,8 @@ class ResaleShop:
 
     def sell(self, computer):
         if computer in self.inventory:
+            # if the computer exists in the list, remove the computer
             self.inventory.remove(computer)
             print("Item", computer, "sold!")
         else: 
             print("Item", computer, "not found. Please select another item to sell.")
-
-
-def main():
-    comp = Computer("thingy", "boop", 123, 23, "PS4", 2002, 200)
-    comp2 = Computer("thy", "bop", 1234, 243, "PS4", 2002, 2004)
-    print(vars(comp))
-    comp.refurbish("N64")
-    print(vars(comp))
-    comp.update_price(300)
-    # invent = []
-    invent = ResaleShop()
-    invent.buy(comp)
-
-    
-    #invent.sell(1)
-    #print(invent)
-    invent.print_inventory()
-
-
-main()
-

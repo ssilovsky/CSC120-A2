@@ -1,7 +1,7 @@
 from typing import Optional
 
 class Computer:
-
+    # attributes of object Computer 
     description: str
     processor_type: str
     hard_drive_capacity: int
@@ -22,6 +22,7 @@ class Computer:
     
 
     def refurbish(self, new_os: Optional[str] = None):
+        # updating OS is within refurbish method
         if int(self.year_made) < 2000:
             self.price = 0 # too old to sell, donation only
         elif int(self.year_made) < 2012:
@@ -36,5 +37,5 @@ class Computer:
     
     def update_price(self, new_price: int):
         print("Changing computer's pice...")
-        self.price = new_price
+        self.price = new_price # update price based on input
         print("Done! The computer now costs", str(new_price) + ".")
