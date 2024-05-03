@@ -1,3 +1,10 @@
+"""
+File: computer.py
+Author: Sophia Silovsky
+Date: 2024-02
+Description: A Python script to create a computer object
+"""
+
 from typing import Optional
 
 class Computer:
@@ -19,8 +26,8 @@ class Computer:
         self.operating_system = operating_system
         self.year_made = year_made
         self.price = price
-    
 
+    # method that refurbishes the computer and updates the software
     def refurbish(self, new_os: Optional[str] = None):
         # updating OS is within refurbish method
         if int(self.year_made) < 2000:
@@ -35,7 +42,11 @@ class Computer:
         if new_os is not None:
             self.operating_system = new_os # update details after installing new OS
     
+    """
+    Takes in a new price, updates the price of the associated
+    computer if it is the inventory
+    """
     def update_price(self, new_price: int):
-        print("Changing computer's pice...")
+        print("Changing computer's price...")
         self.price = new_price # update price based on input
         print("Done! The computer now costs", str(new_price) + ".")

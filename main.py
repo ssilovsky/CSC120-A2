@@ -1,3 +1,10 @@
+"""
+File: main.py
+Author: Sophia Silovsky
+Date: 2024-02
+Description: A Python script to run all the python files
+"""
+
 # Import a few useful containers from the typing module
 from typing import Dict, Union
 
